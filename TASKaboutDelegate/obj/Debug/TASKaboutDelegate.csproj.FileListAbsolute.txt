@@ -1,0 +1,12 @@
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe.config
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.pdb
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.csprojResolveAssemblyReference.cache
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.exe
+c:\users\zueva\documents\visual studio 2012\Projects\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.pdb
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe.config
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.exe
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.pdb
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.pdb
+C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.csprojResolveAssemblyReference.cache
