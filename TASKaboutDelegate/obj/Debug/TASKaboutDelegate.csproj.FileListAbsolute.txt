@@ -10,3 +10,9 @@ C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutD
 C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe
 C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.pdb
 C:\Users\Natali\Desktop\Zueva_Natalia_[.NET03]\Zueva_Natalia_[.NET03]\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.csprojResolveAssemblyReference.cache
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe.config
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.exe
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.pdb
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.exe
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\bin\Debug\TASKaboutDelegate.pdb
+D:\GIT\Delegate\netlabs-task03\TASKaboutDelegate\obj\Debug\TASKaboutDelegate.csprojResolveAssemblyReference.cache

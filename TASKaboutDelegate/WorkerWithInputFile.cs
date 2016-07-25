@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TASKaboutDelegate
 {
+    /// <summary>
+    /// Класс обработки входящего файла
+    /// </summary>
     public class WorkerWithInputFile
     {
         private int _sumIntegers;
@@ -30,11 +33,19 @@ namespace TASKaboutDelegate
         {
             string text = String.Empty;
             //чтение
-            using (StreamReader sr = new StreamReader(file))
+            if (File.Exists(file))
             {
-                text = sr.ReadToEnd();
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    text = sr.ReadToEnd();
+                }
+                if(onEndRead != null)
+                    onEndRead();
             }
-            onEndRead();
+            else
+            {
+                return null;
+            }
             return text.Split(split.ToCharArray());           
         }
 
@@ -46,17 +57,21 @@ namespace TASKaboutDelegate
         /// <param name="sumChar"></param>
         public void GetSumLines(string[] lines, out int arithmeticSum, out int sumChar)
         {
-            foreach (var item in lines)
+            if (lines != null)
             {
-                int value;
-                if (Int32.TryParse(item, out value))
-                    AddValue(AddArithmeticSum, value);
-                else
-                    AddValue(AddValueChars, item.Length);                   
+                foreach (var item in lines)
+                {
+                    int value;
+                    if (Int32.TryParse(item, out value))
+                        AddValue(AddArithmeticSum, value);
+                    else
+                        AddValue(AddValueChars, item.Length);
+                }
             }
             arithmeticSum = _sumIntegers;
             sumChar = _sumChars;
-            onEndCount();
+            if (onEndCount != null)
+                onEndCount();
         }
 
         /// <summary>
@@ -108,12 +123,13 @@ namespace TASKaboutDelegate
                     sr.Write(text);
                 }
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-                onException(ex.Message);
+                if (onException!= null)
+                    onException(String.Format("IOException: {0}",ex.Message));
             }
-
-            onEndWrite();
+            if(onEndWrite != null)
+                onEndWrite();
         }
     }
 }

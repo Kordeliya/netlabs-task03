@@ -16,31 +16,48 @@ namespace TASKaboutDelegate
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Подсчет суммы чисел и символах в строках!");
-
-            _fileInput = ConfigurationManager.AppSettings["InputFile"];
-            _fileOutput = ConfigurationManager.AppSettings["OutputFile"];
-            _skipSign = ConfigurationManager.AppSettings["SkipSign"];
-            
-            WorkerWithInputFile worker = new WorkerWithInputFile();
-            int sumInt = 0;
-            int sumChar = 0;
-
-            worker.onEndRead += Messages.MessageAboutEndRead;
-            worker.onEndCount += Messages.MessageAboutEndCount;
-            worker.onEndWrite += Messages.MessageAboutEndWrite;
-            worker.onException += Messages.MessageException;
-
-            string[] lines = worker.ReadFile(_fileInput, _skipSign);
-            if (lines.Length > 0)
+            try
             {
-                worker.GetSumLines(lines, out sumInt, out sumChar);
+                Console.WriteLine("Подсчет суммы чисел и символах в строках!");
+
+                _fileInput = ConfigurationManager.AppSettings["InputFile"];
+                _fileOutput = ConfigurationManager.AppSettings["OutputFile"];
+                _skipSign = ConfigurationManager.AppSettings["SkipSign"];
+
+                WorkerWithInputFile worker = new WorkerWithInputFile();
+                int sumInt = 0;
+                int sumChar = 0;
+
+                worker.onEndRead += Messages.MessageAboutEndRead;
+                worker.onEndCount += Messages.MessageAboutEndCount;
+                worker.onEndWrite += Messages.MessageAboutEndWrite;
+                worker.onException += Messages.MessageException;
+
+                string[] lines = worker.ReadFile(_fileInput, _skipSign);
+                if (lines == null)
+                {
+                    Console.WriteLine("произошла ошибка считывания файла");
+                    throw new Exception("Ошибка ReadFile()");
+                }
+                if (lines != null && lines.Length > 0)
+                {
+                    worker.GetSumLines(lines, out sumInt, out sumChar);
+                }
+
+                Console.WriteLine("Арифмитическая сумма равняется:{0}", sumInt);
+                Console.WriteLine("Сумма символов в символьных строках равняется:{0}", sumChar);
+
+                worker.WriteResult(_fileOutput, sumInt, sumChar);
+
+                worker.onEndRead -= Messages.MessageAboutEndRead;
+                worker.onEndCount -= Messages.MessageAboutEndCount;
+                worker.onEndWrite -= Messages.MessageAboutEndWrite;
+                worker.onException -= Messages.MessageException;
             }
-
-            Console.WriteLine("Арифмитическая сумма равняется:{0}", sumInt);
-            Console.WriteLine("Сумма символов в символьных строках равняется:{0}", sumChar);
-
-            worker.WriteResult(_fileOutput, sumInt, sumChar);
+            catch (Exception ex)
+            {
+                Console.WriteLine("Произошла ошибка {0}", ex);
+            }
             Console.ReadKey();
 
         }

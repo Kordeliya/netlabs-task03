@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TASKaboutDelegate
 {
+    /// <summary>
+    /// Класс сообщений о выполняющихся действиях
+    /// </summary>
     public static class Messages
     {
         /// <summary>
